@@ -1,0 +1,122 @@
+.device-card {
+    padding: 10px;
+    background: #F3F3F3;
+    border-radius: 15px;
+    border-left: 3px #00559D solid;
+    display: flex;
+    align-items: center;
+    gap: 110px;
+}
+
+.device-image {
+    width: 136px;
+    height: 136px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.device-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.device-info {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.device-name {
+    color: #0058A3;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.device-specs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: flex-start;
+}
+
+.spec-item {
+    width: 195px;
+    display: flex;
+    flex-direction: column;
+}
+
+.spec-label {
+    color: black;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.spec-value {
+    color: black;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.device-quantity {
+    width: 155px;
+    height: 46px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.quantity-controls {
+    width: 135px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    padding: 9px 0;
+    background: #0058A3;
+    border: none;
+    border-radius: 65px;
+    color: white;
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.quantity-display {
+    width: 50px;
+}
+
+.input-field {
+    width: 100%;
+    height: 100%;
+    padding: 4px 8px;
+    background: white;
+    border: 1px solid #B8B8B8;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    color: black;
+}

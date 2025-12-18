@@ -1,0 +1,34 @@
+# Virtual environments
+venv/
+.venv/
+
+# Database
+db.sqlite3
+*.sqlite3
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Django
+*.log
+local_settings.py
+
+cert.pem
+key.pem
+nginx-certs

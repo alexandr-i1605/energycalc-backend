@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Расчет энергопотребления - EnergyCalc{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/pages/consumption-calc.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="calculation-container">
+        {% include 'components/header.html' %}
+    
+        <div class="calculation-content">
+            <div class="main-section">
+                <div class="section-title">
+                    <div class="title-content">Моя заявка на расчет #{{ calculation_request.id }}</div>
+                </div>
+                
+                {% include 'components/calculation/parameter_card.html' %}
+                
+                <div class="devices-section">
+                    <div class="section-title">Добавленные устройства ({{ devices_in_request|length }})</div>
+                    
+                    <div class="devices-list">
+                        {% for device_item in devices_in_request %}
+                            {% include 'components/calculation/added_card.html' with device_item=device_item %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="results-section">
+                <div class="section-title">
+                    <div class="title-content">Результаты расчета</div>
+                </div>
+                
+                {% include 'components/calculation/result_card.html' %}
+            <form method="post" action="{% url 'remove_calculation_request' calculation_request.id %}">
+                {% csrf_token %}
+                <button name="remove_calculation_request">Удалить заявку</button>
+            </form>    
+            </div>
+        </div>
+    </div>
+{% endblock %}

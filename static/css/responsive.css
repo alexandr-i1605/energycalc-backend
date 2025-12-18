@@ -1,0 +1,153 @@
+/* ===== АДАПТИВНЫЕ СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ ===== */
+
+/* Обертка для карточек с переносом */
+.CardStroke {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    padding: 20px 0;
+}
+
+/* Карточки - фиксированная ширина, переносятся */
+.Card {
+    width: 285px; /* Фиксированная ширина как в оригинале */
+    flex-shrink: 0; /* Запрещаем сжимание */
+    margin-bottom: 20px;
+}
+
+/* Хедер с поиском - адаптивный */
+.Header2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 21px 10px;
+    border-bottom: 2px #F0F0F0 solid;
+    width: 100%;
+}
+
+/* Поиск - сжимается, но не наезжает */
+.Search {
+    flex: 1; /* Занимает все доступное пространство */
+    min-width: 200px; /* Минимальная ширина */
+    max-width: 600px; /* Максимальная ширина */
+    height: 48px;
+    padding: 10px 20px;
+    background: #F5F5F5;
+    border-radius: 64px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Кнопка расчета - не сжимается */
+.CalcBtn {
+    flex-shrink: 0; /* Не сжимается */
+    width: 42px;
+    margin-left: auto;
+}
+
+/* ===== АДАПТИВНОСТЬ ПО БРЕЙКПОИНТАМ ===== */
+
+/* Большие планшеты (1024px - 1200px) */
+@media (max-width: 1200px) {
+    .CardStroke {
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .Card {
+        width: calc(33.333% - 20px); /* 3 карточки в ряд */
+        max-width: 285px;
+    }
+}
+
+/* Планшеты (768px - 1024px) */
+@media (max-width: 1024px) {
+    .Card {
+        width: calc(50% - 15px); /* 2 карточки в ряд */
+    }
+    
+    .Search {
+        max-width: 500px;
+    }
+    
+    .Header2 {
+        flex-wrap: nowrap; /* Запрещаем перенос */
+        gap: 15px;
+    }
+}
+
+/* Мобильные (480px - 768px) */
+@media (max-width: 768px) {
+    .CardStroke {
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .Card {
+        width: 100%; /* 1 карточка в ряд */
+        max-width: 320px;
+    }
+    
+    .Header2 {
+        flex-wrap: wrap; /* Разрешаем перенос при необходимости */
+    }
+    
+    .Search {
+        min-width: 150px;
+        max-width: 100%;
+        order: 1;
+    }
+    
+    .CalcBtn {
+        order: 2;
+        margin-left: 0;
+    }
+}
+
+/* Маленькие мобильные (до 480px) */
+@media (max-width: 480px) {
+    .Card {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .Header2 {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 10px;
+    }
+    
+    .Search {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .CalcBtn {
+        align-self: flex-end;
+    }
+}
+
+/* Очень большие экраны (более 1440px) */
+@media (min-width: 1440px) {
+    .CardStroke {
+        justify-content: flex-start;
+    }
+    
+    .Card {
+        width: calc(25% - 20px); /* 4 карточки в ряд */
+    }
+}
+
+/* Защита от слишком маленького поиска */
+@media (max-width: 350px) {
+    .Search {
+        min-width: 120px;
+    }
+    
+    .SearchInput {
+        font-size: 14px;
+    }
+}

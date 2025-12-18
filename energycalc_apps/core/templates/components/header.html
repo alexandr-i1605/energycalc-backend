@@ -1,0 +1,14 @@
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/components/header.css' %}">
+{% endblock %}
+
+<div data-layer="Header" class="Header">
+    <a href="{% url 'home' %}" class="home-link">
+        <div data-layer="home-btn" class="HomeBtn">
+            <img src="{% static 'icons/home.svg' %}" alt="Домой" class="HomePageIcon">
+            <div data-layer="Домой" class="HomeText">Домой</div>
+        </div>
+    </a>
+</div>

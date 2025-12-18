@@ -1,0 +1,30 @@
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/components/calculation/result_card.css' %}">
+{% endblock %}
+
+<div class="results-card">
+    <div class="results-header">
+        <div class="results-title">Энергопотребление за месяц</div>
+    </div>
+    
+    <div class="results-breakdown">
+        <div class="breakdown-item">
+            <div class="breakdown-label">Базовое потребление:</div>
+            <div class="breakdown-value">4036 кВт/мес</div>
+        </div>
+        <div class="breakdown-item">
+            <div class="breakdown-label">Учёт температуры:</div>
+            <div class="breakdown-value">+600 кВт/мес</div>
+        </div>
+        <div class="breakdown-item">
+            <div class="breakdown-label">Учет жителей:</div>
+            <div class="breakdown-value">+807,2 кВт/мес</div>
+        </div>
+    </div>
+    
+    <div class="results-total">
+        <div class="total-text">Итого: {{ calculation_request.result }} кВт/мес</div>
+    </div>
+</div>

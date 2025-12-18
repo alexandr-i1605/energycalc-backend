@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Главная страница - EnergyCalc{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/pages/homepage.css' %}">
+{% endblock %}
+
+{% block content %}
+<div data-layer="Home page" class="HomePage">
+    {% include 'components/header.html' %}
+    
+    <div data-layer="header2" class="Header2">
+        <form action="{% url 'home' %}" method="get" style="display: contents;">
+            <div data-layer="search" class="Search">
+                <img src="{% static 'icons/search.svg' %}" alt="Поиск" class="SearchIcon"
+                    onclick="this.closest('form').submit()"
+                    style="cursor: pointer;">
+                <input type="text" name="search" value="{{ search_query }}" placeholder="Найти устройство" 
+                    class="SearchInput" style="background: transparent; border: none; outline: none; width: 100%;">
+            </div>
+        </form>
+        {% if is_cart_active and draft_request_id %}
+            <a href="{% url 'consumption-calc' id=draft_request_id %}" style="text-decoration: none; color: inherit; margin-left: auto;">
+                <div data-layer="calc-btn" class="CalcBtn" style="cursor: pointer;">
+                    <img src="{% static 'icons/bolt.svg' %}" alt="Энергия" class="EnergyWindow">
+                    {% if devices_in_cart > 0 %}
+                        <div class="Ellipse1">
+                            <div class="Counter">{{ devices_in_cart }}</div>
+                        </div>
+                    {% endif %}
+                </div>
+            </a>
+        {% else %}
+            <div style="margin-left: auto;">
+                <div data-layer="calc-btn" class="CalcBtn" style="cursor: not-allowed; opacity: 0.5;">
+                    <img src="{% static 'icons/bolt.svg' %}" alt="Энергия" class="EnergyWindow">
+                    {% if devices_in_cart > 0 %}
+                        <div class="Ellipse1">
+                            <div class="Counter">{{ devices_in_cart }}</div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    
+    <div data-layer="cards" class="Cards">
+        <div data-layer="card-stroke" class="CardStroke">
+            {% for device in devices %}
+                {% include 'components/device_cards/card.html' with device=device %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,87 @@
+.calculation-container{
+    width: 100%;
+    min-height: 720px;
+    background: white;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+    display: flex;
+}
+
+.calculation-content {
+    flex-direction: row;
+    flex: 2;
+    display: flex;
+    gap: 10px;
+    margin-inline-start: 0.5%;
+    margin-inline-end: 0.5%;
+}
+
+.main-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.results-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-title {
+    font-size: 24px;
+    padding: 5px 0;
+    border-bottom: 2px #FFF600 solid;
+}
+
+.title-content {
+    color: #0058A3;
+    font-size: 26px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    padding: 0 15px;
+}
+
+/* Devices Section */
+.devices-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.devices-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .calculation-content {
+        flex-direction: column;
+    }
+    
+    .device-card {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    
+    .device-info {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .device-specs-grid {
+        flex-direction: column;
+    }
+    
+    .spec-item {
+        width: 100%;
+    }
+}

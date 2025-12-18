@@ -1,0 +1,66 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: white;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+a, u {
+  text-decoration: none;
+}
+
+@media (max-width: 1300px) {
+    .HomePage {
+        width: 100%;
+    }
+    
+    .Card {
+        width: calc(25% - 7px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .Card {
+        width: calc(33.333% - 7px);
+    }
+}
+
+@media (max-width: 768px) {
+    .Card {
+        width: calc(50% - 7px);
+    }
+    
+    .Search {
+        width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Card {
+        width: 100%;
+    }
+    
+    .Search {
+        width: 300px;
+    }
+    
+    .Header2 {
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+        padding: 15px 10px;
+    }
+    
+    .CalcBtn {
+        margin: 15px auto 0;
+    }
+}

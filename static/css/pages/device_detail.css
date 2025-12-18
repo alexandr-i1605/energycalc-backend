@@ -1,0 +1,16 @@
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.device-detail-container {
+    width: 100%;
+    min-height: 672px;
+    position: relative;
+    background: white;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}

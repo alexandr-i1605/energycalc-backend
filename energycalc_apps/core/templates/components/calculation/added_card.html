@@ -1,0 +1,39 @@
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/components/calculation/added_card.css' %}">
+{% endblock %}
+
+<div class="device-card">
+    <div class="device-image">
+        <img src="{{ device_item.device.image_url }}" alt="{{ device_item.device.name }}">
+    </div>
+    <div class="device-info">
+        <div class="device-name">{{ device_item.device.name }}</div>
+        <div class="device-specs-grid">
+            <div class="spec-item">
+                <div class="spec-label">Мощность</div>
+                <div class="spec-value">{{ device_item.device.power }} Вт</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Потребление</div>
+                <div class="spec-value">{{ device_item.device.consumption }}</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Работает в день</div>
+                <div class="spec-value">~{{ device_item.device.work_per_day}}</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Класс энергоэффективности</div>
+                <div class="spec-value">{{ device_item.device.energy_class }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="device-quantity">
+        <div class="quantity-controls">
+            <div class="quantity-display">
+                <input type="text" value="{{ device_item.quantity }}" class="input-field" readonly>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,179 @@
+.Cards {
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 9px;
+    display: flex;
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 10px;
+}
+
+.CardStroke {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    overflow: hidden;
+    border-bottom: 2px #F5F5F5 solid;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 9px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Card {
+    width: calc(25% - 7px);
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    display: inline-flex;
+    margin-bottom: 15px;
+}
+
+.CardImage {
+    width: 100%;
+    height: 285px;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+}
+
+.CardImg {
+    width: 285px;
+    height: 285px;
+    object-fit: cover;
+}
+
+.CardImg[src*="286x285"] {
+    width: 285px;
+    height: 285px;
+    object-fit: cover;
+}
+
+.CardTitle {
+    align-self: stretch;
+    height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+}
+
+.TitleText {
+    width: 100%;
+    height: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-size: 18px;
+    font-family: 'Edu QLD Beginner', cursive;
+    font-weight: 600;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.CardCategory {
+    align-self: stretch;
+    height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+}
+
+.CategoryText {
+    width: 100%;
+    height: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.CardSpecs {
+    align-self: stretch;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    display: flex;
+}
+
+.SpecItem {
+    flex: 1;
+    align-self: stretch;
+}
+
+.SpecLabel {
+    color: black;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+.SpecValue {
+    color: black;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.CardButtons {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    margin-top: 10px;
+}
+
+.CardButton {
+    width: calc(50% - 5px);
+    height: 40px;
+    background: #0058A3;
+    border-radius: 180px;
+    display: flex;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    line-height: 40px;
+}
+
+.CardButton:hover {
+    background: #003d73;
+}
+
+.ButtonText {
+    color: white;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}

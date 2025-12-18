@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ device.name }} - EnergyCalc{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/pages/device_detail.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% include 'components/header.html' %}
+    <div class="device-detail-container">    
+        <div class="device-content">
+            {% include 'components/device_cards/detail_card.html' %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,307 @@
+.device-content {
+    width: 700px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Image Section */
+.device-image-section {
+    width: 240px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.device-image {
+    align-self: stretch;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Info Section */
+.device-info-section {
+    width: 460px;
+    height: 100%;
+    padding: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.device-category {
+    align-self: stretch;
+    height: 18px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-text {
+    width: 100%;
+    height: 18px;
+    color: black;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    word-wrap: break-word;
+    margin: 0;
+}
+
+/* Title Section */
+.device-title-section {
+    align-self: stretch;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    border-bottom: 2px #FFF600 solid;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.device-title {
+    color: #0058A3;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    word-wrap: break-word;
+    margin: 0; /* Сбрасываем отступы */
+    line-height: 1.2; /* Добавляем line-height */
+}
+
+/* Specifications */
+.device-specs {
+    align-self: stretch;
+    height: 155px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.spec-item {
+    width: 450px;
+    overflow: hidden;
+    border-bottom: 2px #F0F0F0 solid;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 100px;
+}
+
+.spec-label {
+    width: 240px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+.spec-value {
+    width: 120px;
+    min-height: 23px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.value-number {
+    color: black;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.value-content {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    white-space: nowrap;
+}
+
+.value-unit {
+    color: #0058A3;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.energy-class {
+    color: #0058A3;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center; /* Добавляем вертикальное центрирование */
+}
+
+/* Description Section */
+.device-description {
+    align-self: stretch;
+    height: 140px;
+    padding: 6px 12px;
+    background: #F3F3F3;
+    overflow: hidden;
+    border-radius: 15px;
+    border-left: 3px #00559D solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.description-header {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.description-title {
+    display: flex;
+    align-items: center; /* Заменяем flex-direction: column */
+    color: #0058A3;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+    height: 100%; /* Добавляем высоту */
+}
+
+.description-content {
+    align-self: stretch;
+    height: 99px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.description-text {
+    color: black;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    word-wrap: break-word;
+    line-height: 1.4;
+    margin: 0; /* Сбрасываем отступы */
+}
+
+/* Consumption Section */
+.device-consumption {
+    width: 450px;
+    height: 40px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.consumption-text {
+    display: flex;
+    align-items: center; /* Заменяем flex-direction: column */
+    gap: 5px; /* Добавляем отступ между элементами */
+}
+
+.consumption-label {
+    color: black;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+.consumption-value {
+    color: #0058A3;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+/* Анимации */
+.spec-item {
+    transition: border-color 0.3s ease;
+}
+
+.spec-item:hover {
+    border-bottom-color: #0058A3;
+}
+
+.device-title {
+    transition: color 0.3s ease;
+}
+
+.device-title:hover {
+    color: #003366;
+}
+
+@media (max-width: 768px) {
+    .device-detail-container {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .device-content {
+        width: 100%;
+        height: auto;
+        position: relative;
+        left: 0;
+        top: 0;
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .device-image-section {
+        width: 100%;
+        height: auto;
+    }
+    
+    .device-info-section {
+        width: 100%;
+        height: auto;
+    }
+    
+    .spec-item {
+        width: 100%;
+        gap: 20px;
+    }
+    
+    .spec-label {
+        width: 60%;
+    }
+}

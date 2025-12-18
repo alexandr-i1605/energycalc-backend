@@ -1,0 +1,27 @@
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/components/calculation/parameter_card.css' %}">
+{% endblock %}
+
+<div class="parameters-card">
+    <div class="card-header">
+        <div class="header-title">Параметры расчета</div>
+    </div>
+    
+    <div class="parameter-group">
+        <div class="parameter-label">Средняя температура в месяце (°C)</div>
+        <div class="parameter-input">
+            <input type="text" value="{{ calculation_request.temperature }}" class="input-field" readonly>
+        </div>
+        <div class="parameter-hint">Влияет на потребление отопительных и охлаждающих устройств</div>
+    </div>
+    
+    <div class="parameter-group">
+        <div class="parameter-label">Количество жителей</div>
+        <div class="parameter-input">
+            <input type="text" value="{{ calculation_request.residents }}" class="input-field" readonly>
+        </div>
+        <div class="parameter-hint">Влияет на интенсивность использования устройств</div>
+    </div>
+</div>

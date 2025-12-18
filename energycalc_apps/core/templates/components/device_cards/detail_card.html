@@ -1,0 +1,69 @@
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/components/device_cards/detail_card.css' %}">
+{% endblock %}
+
+<div class="device-image-section">
+    <img class="device-image" src="{{ device.image_url }}" alt="{{ device.name }}" />
+</div>
+
+<div class="device-info-section">
+    <div class="device-category">
+        <div class="category-text">{{ device.category }}</div>
+    </div>
+    
+    <div class="device-title-section">
+        <div class="device-title">{{ device.name }}</div>
+    </div>
+    
+    <div class="device-specs">
+        <div class="spec-item">
+            <div class="spec-label">Номинальная мощность:</div>
+            <div class="spec-value">
+                <span class="value-content">
+                    <span class="value-number">{{ device.power }}</span>
+                    <span class="value-unit">Вт</span>
+                </span>
+            </div>
+        </div>
+        
+        {% if device.peak_power %}
+        <div class="spec-item">
+            <div class="spec-label">Пиковая мощность:</div>
+            <div class="spec-value">
+                <span class="value-content">
+                    <span class="value-number">{{ device.peak_power }}</span>
+                    <span class="value-unit">Вт</span>
+                </span>
+            </div>
+        </div>
+        {% endif %}
+        
+        {% if device.voltage %}
+        <div class="spec-item">
+            <div class="spec-label">Напряжение питания:</div>
+            <div class="spec-value">
+                <span class="value-content">
+                    <span class="value-number">{{ device.voltage }}</span>
+                    <span class="value-unit">В</span>
+                </span>
+            </div>
+        </div>
+        {% endif %}
+        
+        {% if device.energy_class %}
+        <div class="spec-item">
+            <div class="spec-label">Класс энергоэффективности:</div>
+            <div class="spec-value energy-class">{{ device.energy_class }}</div>
+        </div>
+        {% endif %}
+    </div>
+    
+    <div class="device-consumption">
+        <div class="consumption-text">
+            <span class="consumption-label">Среднее потребление: </span>
+            <span class="consumption-value">{{ device.consumption }}</span>
+        </div>
+    </div>
+</div>
