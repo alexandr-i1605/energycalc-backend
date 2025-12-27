@@ -387,7 +387,7 @@ def receive_calculation_result(request, request_id):
     result_value = request.data.get("result")
     
     if token != SECRET_TOKEN:
-        return Response({"error": "Invalid token"}, status=status.HTTP_401_UNAUTHORIZED)
+        return Response({"error": "Invalid token"}, status=status.HTTP_403_FORBIDDEN)
     
     calculation_request = get_object_or_404(CalculationRequest, id=request_id)
     
